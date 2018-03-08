@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <link rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Psychic Game</title>
+  </head>
+  <body>
+        <p class="guesses"></p>
+       
+<!--Provide the player with a way to guess what the number is/-->     
+        <label for="guessField">Guess a letter: </label><input type="text" id="guessField" class="guessField">
+        <input type="submit" value="Submit guess" id="guessSubmit">
+
+
+    <script type="text/javascript">
+//Generate a random letter between A and Z
+
+function randomLetter (array) {
+    return array[Math.floor(Math.random() * array.length)]
+}
+
+var alphabets = "ab".split("")
+var result = "";
+for (var i = 0; i < 1; i++) {
+    result += randomLetter(alphabets)
+}
+console.log(result)
+
+
+//Record the turn number the player is on
+
+var attempts = 1;
+
+//Once a guess has been submitted first record it somewhere so the user can see their previous guesses. 
+//Check if its the correct letter
+var guessField = document.getElementById("guessField");
+guessField="";
+console.log(guessField);
+//If it is correct
+if (guessField==randomLetter){
+    document.write("guessField");
+    console.log(guessResult);
+}else{document.write("guessField");}
+
+    //display congratulations
+    //stop the player from being able to enter more guesses
+//If its wrong and the player has turns left:
+    //tell the player they are wrong
+    //allow them to enter another guess
+    //Increment the turn number by 1
+//If its wrong and the player has no turns left:
+    //Tell the player they are wrong
+    //stop the player from being able to enter more gueses 
+    //display control allowing the player to restart the game
+    
+   
+
+ 
+
+    </script>
+
+  </body>
+</html>
